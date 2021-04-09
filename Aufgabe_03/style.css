@@ -1,0 +1,115 @@
+body {
+        font-family: sans-serif;
+        background-image: url(assets/grafikelemente/bg.png);
+        margin-top: 0;
+}
+
+#alles {
+        margin: 0 auto;
+        width: 800px;
+}
+
+h3 {
+        color: brown;
+}
+
+h2 {
+        color: brown;
+}
+
+#navigation {
+        text-decoration: none;
+        color: white;
+}
+
+#aktnavi {
+        color: brown;
+        text-decoration: none;
+}
+
+nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        border-radius: 5px;
+        background-color: black;
+        float: right;
+        color: white;
+        margin-top: -400px;
+}
+
+#navigation:hover {
+        background-color: brown;
+        color: black;
+}
+
+#aktnavi:hover {
+        background-color: brown;
+        color: black;
+}
+
+.kreis {
+        width: 700px;
+        height: 350px;
+        border-radius: 0 0 350px 350px;
+        background-color: brown;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: white;
+}
+
+#facebook {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.facebookicon:hover {
+        background-color: blue;
+        background-size: 25px;
+}
+
+input {
+        background-color: silver;
+        margin: 0 0 1em 0;
+        border: none;
+}
+
+::placeholder {
+        color: white;
+}
+
+textarea {
+        background-color: silver;
+        border: none;
+        width: 20em;
+}
+
+button {
+        background-color: silver;
+        border: none;
+        margin-top: 1em;
+        color: white;
+}
+
+strong {
+        margin-top: 0;
+        text-decoration: underline;
+        font-size: 75pt;
+        
+}
+
+.Textimkreis {
+        color: white;
+        text-align: center;
+        margin-left: 250px;
+        margin-right: 75px;
+        text-align: left;
+}
+
+#textvorabsenden {
+        font-size: 8pt;
+        color: silver;
+        margin-top: 20px;
+}
