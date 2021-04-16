@@ -1,0 +1,68 @@
+body {
+    background-image: url(assets/bg.png);
+}
+
+#Card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+}
+
+.left {
+    width: 30%;
+    position: absolute;
+    top: 120px;
+    left: 5%;
+}
+
+.right {
+    width: 30%;
+    position: absolute;
+    top: 120px;
+    right: 5%;
+}
+
+.mid {
+    width: 30%;
+    position: absolute;
+    top: 120px;
+    left: 35%;
+    right: 35%;
+}
+
+.untenlinks {
+    width: 40%;
+    position: absolute;
+    bottom: 70px;
+    left: 5%;
+}
+
+.untenrechts {
+    width: 40%;
+    position: absolute;
+    bottom: 70px;
+    right: 5%;
+}
+
+.Column {
+    text-align: center;
+    color: black;
+    column-gap: 10px;
+
+    
+    
+
+}
+
+/*.COlumn:after {
+    content: "";
+    display: table;
+    clear: both;}*/

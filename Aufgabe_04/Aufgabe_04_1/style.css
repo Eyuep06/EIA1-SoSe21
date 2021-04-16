@@ -1,0 +1,44 @@
+body {
+    background-image: url(assets/bg.png);
+}
+
+#Card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Pinguin {
+    position: absolute;
+    right: -60px;
+    bottom: 20px;
+    
+}
+
+.Muscheln {
+    position: absolute;
+    left: -60px;
+    bottom: -25px;
+    
+}
+p {position: absolute;
+    top: 120px;
+    left: 40px;
+    right: 40px;
+    text-align: left;
+    color: white;
+    
+}
+
+h1{color: white;
+    position: absolute;
+    top: 10px;
+    text-align: left;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+
+}

@@ -1,0 +1,15 @@
+body {background-image: url(assets/bg.png);}
+#Card {position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+
+iframe {position: absolute;
+top: 59.5px ;
+bottom: 59.5px ;
+left: 50px;
+right: 50px;}
+
+.schleife {position: absolute;
+bottom: 5px;
+right:2px ;}
