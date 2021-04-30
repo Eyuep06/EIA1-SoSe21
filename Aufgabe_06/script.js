@@ -31,12 +31,12 @@ var aufgabe6;
       var UnterschiedAustralienKg: number = aufrunden((emissionAustralien18 - emissionAustralien08));
       var UnterschiedSamericaKg: number = aufrunden((emissionSamerica18 - emissionSamerica08));
       var UnterschiedNamericaKg: number = aufrunden((emissionNamerica18 - emissionNamerica08));*/
-    var Asien = 'Asien';
-    var Afrika = 'Afrika';
-    var Australien = 'Australien';
-    var Europa = 'Europa';
-    var Suedamerika = 'Südamerika';
-    var Nordamerika = 'Nordamerika';
+    var Asien = 'Asia';
+    var Afrika = 'Africa';
+    var Australien = 'Australia';
+    var Europa = 'Europe';
+    var Suedamerika = 'Southamerica';
+    var Nordamerika = 'Northamerica';
     document.querySelector('.europe').addEventListener('click', function () { emissionsWerte(Europa, emissionEuropa18, emissionEuropa08); });
     document.querySelector('.asia').addEventListener('click', function () { emissionsWerte(Asien, emissionAsien18, emissionAsien08); });
     document.querySelector('.africa').addEventListener('click', function () { emissionsWerte(Afrika, emissionAfrika18, emissionAfrika08); });

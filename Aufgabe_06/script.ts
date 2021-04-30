@@ -37,12 +37,12 @@ namespace aufgabe6 {
       var UnterschiedSamericaKg: number = aufrunden((emissionSamerica18 - emissionSamerica08));
       var UnterschiedNamericaKg: number = aufrunden((emissionNamerica18 - emissionNamerica08));*/
 
-    var Asien: string = 'Asien';
-    var Afrika: string = 'Afrika';
-    var Australien: string = 'Australien';
-    var Europa: string = 'Europa';
-    var Suedamerika: string = 'Südamerika';
-    var Nordamerika: string = 'Nordamerika'
+    var Asien: string = 'Asia';
+    var Afrika: string = 'Africa';
+    var Australien: string = 'Australia';
+    var Europa: string = 'Europe';
+    var Suedamerika: string = 'Southamerica';
+    var Nordamerika: string = 'Northamerica'
 
 
     document.querySelector('.europe').addEventListener('click', function () { emissionsWerte(Europa, emissionEuropa18, emissionEuropa08); });
