@@ -1,3 +1,5 @@
+namespace aufgabe5{
+
 function aufrunden(zahl: number): number {
     return Math.round(zahl * 100) / 100
 
@@ -71,3 +73,4 @@ console.log(Ausgabe1 + "Nordamerika ist: " + emissionNamerica18 + Ausgabe1_2)
 console.log(Ausgabe2 + "Nordamerika damit " + aufrunden( emissionNamerica18 / emissionWelt18 * hundert) + "%")
 console.log("Für Noramerika" + Ausgabe3 + UnterschiedNamericaProz + "% verändert")
 console.log(Ausgabe4 + UnterschiedNamericaKg + Ausgabe1_2)
+}
