@@ -1,0 +1,134 @@
+body{    background-color: black;
+}
+
+#drumpad {
+    height: 480px;
+    width: 480px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button1 {
+    background: linear-gradient(-45deg,   #4a75f7, #678af5);
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button2 {
+    background: linear-gradient(-45deg,   #4a75f7, #678af5);    
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+
+}
+
+.button3 {
+    background: linear-gradient(-45deg,   #4a75f7, #678af5);    
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button4 {
+    background: linear-gradient(-45deg, #ff3e96, #ee5e9f);
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button5 {
+    background: linear-gradient(-45deg, #ff3e96, #ee5e9f);    
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button6 {
+    background: linear-gradient(-45deg, #ff3e96, #ee5e9f);    
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    top: 163px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button7 {
+    background: linear-gradient(-45deg, #ff3e96, #ee5e9f);    
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button8 {
+    background: linear-gradient(-45deg, #ff8c00, #ee9f3e);
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 163px;
+    bottom: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.button9 {
+    background: linear-gradient(-45deg, #ff8c00, #ee9f3e );
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border-style: outset;
+    border-width: 2px;
+}
+
+.playbutton {
+    display: flex; 
+    justify-content: center; 
+    cursor: pointer;
+    }
