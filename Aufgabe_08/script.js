@@ -1,7 +1,10 @@
 var aufgabe8;
 (function (aufgabe8) {
+    var myInterval;
+    var deleteBtn = document.querySelector(".deleteButton");
     var playBtn = document.querySelector(".playButton");
     var stopBtn = document.querySelector(".stopButton");
+    var rmxBtn = document.querySelector(".remixButton");
     var indexZahler = 0;
     var samples = [new Audio("assets/snare.mp3"), new Audio("assets/laugh1.mp3"), new Audio("assets/laugh2.mp3"), new Audio("assets/kick.mp3"), new Audio("assets/hihat.mp3"), new Audio("assets/G.mp3"), new Audio("assets/F.mp3"), new Audio("assets/C.mp3"), new Audio("assets/A.mp3")];
     var playbuttonSamples = [new Audio("assets/kick.mp3"), new Audio("assets/snare.mp3"), new Audio("assets/hihat.mp3")];
@@ -15,26 +18,38 @@ var aufgabe8;
     document.querySelector(".button8").addEventListener("click", function () { playSample(samples[7]); });
     document.querySelector(".button9").addEventListener("click", function () { playSample(samples[8]); });
     document.querySelector(".playButton").addEventListener("click", function () {
-        setInterval(function () {
-            playbuttonSamples[indexZahler].play();
-            indexZahler = indexZahler + 1;
-            if (indexZahler == 3) {
-                indexZahler = 0;
-            }
-        }, 1000);
+        {
+            myInterval = setInterval(function () {
+                playbuttonSamples[indexZahler].play();
+                indexZahler = indexZahler + 1;
+                if (indexZahler == 3) {
+                    indexZahler = 0;
+                }
+            }, 1000);
+        }
     });
     function playSample(sound) {
         sound.play();
     }
+    deleteBtn.addEventListener("click", function () {
+        playbuttonSamples.length = 0;
+        if (playbuttonSamples.length == 0) {
+            playBtn.classList.remove("isHidden");
+            stopBtn.classList.add("isHidden");
+        }
+    });
     playBtn.addEventListener("click", function () {
         changeClasses(this, stopBtn);
     });
     stopBtn.addEventListener("click", function () {
         changeClasses(this, playBtn);
+        clearInterval(myInterval);
+        indexZahler = 0;
     });
     function changeClasses(firsHTMLElement, secondHTMLElement) {
         firsHTMLElement.classList.add("isHidden");
         secondHTMLElement.classList.remove("isHidden");
     }
+    rmxBtn.addEventListener("click", function () { });
 })(aufgabe8 || (aufgabe8 = {}));
 //# sourceMappingURL=script.js.map

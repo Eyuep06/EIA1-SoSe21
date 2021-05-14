@@ -145,6 +145,12 @@ body {
     color: white;
 }
 
+.remixButton {
+    text-align: center;
+    font-size: 75px;
+    color: white;
+}
+
 .isHidden {
     display: none !important;
 }
