@@ -50,6 +50,15 @@ var aufgabe8;
         firsHTMLElement.classList.add("isHidden");
         secondHTMLElement.classList.remove("isHidden");
     }
-    rmxBtn.addEventListener("click", function () { });
+    rmxBtn.addEventListener("click", function () {
+        playbuttonSamples.length = 0;
+        console.log(playbuttonSamples);
+        while (playbuttonSamples.length < 3) {
+            var r = samples[Math.floor(Math.random() * samples.length)];
+            if (playbuttonSamples.indexOf(r) === -1)
+                playbuttonSamples.push(r);
+            console.log(playbuttonSamples[indexZahler]);
+        }
+    });
 })(aufgabe8 || (aufgabe8 = {}));
 //# sourceMappingURL=script.js.map

@@ -1,5 +1,5 @@
 namespace aufgabe8 {
-
+   
     var myInterval: number;
     var deleteBtn: HTMLElement = document.querySelector(".deleteButton");
     var playBtn: HTMLElement = document.querySelector(".playButton");
@@ -20,22 +20,26 @@ namespace aufgabe8 {
     document.querySelector(".button8").addEventListener("click", function (): void { playSample(samples[7]); });
     document.querySelector(".button9").addEventListener("click", function (): void { playSample(samples[8]); });
     document.querySelector(".playButton").addEventListener("click", function (): void {
-         {myInterval = setInterval(function (): void {
-            playbuttonSamples[indexZahler].play();
-            indexZahler = indexZahler + 1;
+        {
+            myInterval = setInterval(function (): void {
+                playbuttonSamples[indexZahler].play();
+                indexZahler = indexZahler + 1;
+
+                if (indexZahler == 3) {
+                    indexZahler = 0;
+                }
+
+            }, 1000);
             
-            if (indexZahler == 3) {
-                indexZahler = 0; }
+        }
 
-        }, 1000); }
 
-       
-        });
+    });
 
-        
-    
 
-    
+
+
+
 
     function playSample(sound: HTMLAudioElement): void {
 
@@ -43,35 +47,34 @@ namespace aufgabe8 {
     }
 
 
-    deleteBtn.addEventListener("click", function(): void {
+    deleteBtn.addEventListener("click", function (): void {
         playbuttonSamples.length = 0;
         if (playbuttonSamples.length == 0) {
-            playBtn.classList.remove("isHidden"); 
-            stopBtn.classList.add("isHidden"); }
-            
-                
+            playBtn.classList.remove("isHidden");
+            stopBtn.classList.add("isHidden");
+        }
 
 
     });
 
-    playBtn.addEventListener("click", function(): void {
+    playBtn.addEventListener("click", function (): void {
         changeClasses(this, stopBtn);
-        
-        
+
+
     });
 
-    
-    stopBtn.addEventListener("click", function(): void {
+
+    stopBtn.addEventListener("click", function (): void {
         changeClasses(this, playBtn);
         clearInterval(myInterval);
-        indexZahler = 0; 
-        
+        indexZahler = 0;
 
-        
-    }  );
 
-    
-    function changeClasses (firsHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
+
+    });
+
+
+    function changeClasses(firsHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
         firsHTMLElement.classList.add("isHidden");
         secondHTMLElement.classList.remove("isHidden");
 
@@ -79,31 +82,25 @@ namespace aufgabe8 {
     }
 
 
-rmxBtn.addEventListener("click", function(): void {});
+    rmxBtn.addEventListener("click", function (): void {
+        playbuttonSamples.length = 0;
+        console.log(playbuttonSamples);
+        while (playbuttonSamples. length < 3) {
+            var r: HTMLAudioElement = samples[Math. floor(Math. random() * samples.length)] ;
+            if (playbuttonSamples. indexOf(r) === -1) playbuttonSamples. push(r);
+            console. log(playbuttonSamples[indexZahler]);
+            }
+          });    
+         
 
 
+    
 
+   
+    
 
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
 }
-
-
-
-
-
-
-
-
-

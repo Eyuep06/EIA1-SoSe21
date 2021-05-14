@@ -131,24 +131,28 @@ body {
     text-align: center;
     font-size: 75px;
     color: white;
+    cursor: pointer;
 }
 
 .stopButton {
     text-align: center;
     font-size: 75px;
     color: white;
+    cursor: pointer;
 }
 
 .deleteButton {
     text-align: center;
     font-size: 75px;
     color: white;
+    cursor: pointer;
 }
 
 .remixButton {
     text-align: center;
     font-size: 75px;
     color: white;
+    cursor: pointer;
 }
 
 .isHidden {
