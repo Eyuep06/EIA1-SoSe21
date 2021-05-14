@@ -1,5 +1,5 @@
 namespace aufgabe8 {
-   
+
     var myInterval: number;
     var deleteBtn: HTMLElement = document.querySelector(".deleteButton");
     var playBtn: HTMLElement = document.querySelector(".playButton");
@@ -21,16 +21,18 @@ namespace aufgabe8 {
     document.querySelector(".button9").addEventListener("click", function (): void { playSample(samples[8]); });
     document.querySelector(".playButton").addEventListener("click", function (): void {
         {
-            myInterval = setInterval(function (): void {
-                playbuttonSamples[indexZahler].play();
-                indexZahler = indexZahler + 1;
+            if (playbuttonSamples.length > 0) {
+                myInterval = setInterval(function (): void {
+                    playbuttonSamples[indexZahler].currentTime = 0;
+                    playbuttonSamples[indexZahler].play();
+                    indexZahler = indexZahler + 1;
 
-                if (indexZahler == 3) {
-                    indexZahler = 0;
-                }
+                    if (indexZahler == 3) {
+                        indexZahler = 0;
+                    }
 
-            }, 1000);
-            
+                }, 1000);
+            }
         }
 
 
@@ -85,21 +87,21 @@ namespace aufgabe8 {
     rmxBtn.addEventListener("click", function (): void {
         playbuttonSamples.length = 0;
         console.log(playbuttonSamples);
-        while (playbuttonSamples. length < 3) {
-            var r: HTMLAudioElement = samples[Math. floor(Math. random() * samples.length)] ;
-            if (playbuttonSamples. indexOf(r) === -1) playbuttonSamples. push(r);
-            console. log(playbuttonSamples[indexZahler]);
-            }
-          });    
-         
+        while (playbuttonSamples.length < 3) {
+            var r: HTMLAudioElement = samples[Math.floor(Math.random() * samples.length)];
+            if (playbuttonSamples.indexOf(r) === -1) playbuttonSamples.push(r);
+            console.log(playbuttonSamples[indexZahler]);
+        }
+    });
 
 
-    
 
-   
-    
 
-    
+
+
+
+
+
 
 
 

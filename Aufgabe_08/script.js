@@ -19,13 +19,16 @@ var aufgabe8;
     document.querySelector(".button9").addEventListener("click", function () { playSample(samples[8]); });
     document.querySelector(".playButton").addEventListener("click", function () {
         {
-            myInterval = setInterval(function () {
-                playbuttonSamples[indexZahler].play();
-                indexZahler = indexZahler + 1;
-                if (indexZahler == 3) {
-                    indexZahler = 0;
-                }
-            }, 1000);
+            if (playbuttonSamples.length > 0) {
+                myInterval = setInterval(function () {
+                    playbuttonSamples[indexZahler].currentTime = 0;
+                    playbuttonSamples[indexZahler].play();
+                    indexZahler = indexZahler + 1;
+                    if (indexZahler == 3) {
+                        indexZahler = 0;
+                    }
+                }, 1000);
+            }
         }
     });
     function playSample(sound) {
