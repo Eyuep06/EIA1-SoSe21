@@ -12,11 +12,9 @@ namespace aufgabe9 {
 
     if (keyboardEvent.key == "Enter") {
 
-      console.log("enter");
-      /*
       let newTask: HTMLDivElement = document.createElement("div");
       newTask.className = "task1";
-      document.querySelector(".furtherTasks").appendChild(newTask);*/
+      document.querySelector(".furtherTasks").appendChild(newTask);
 
 
     }
