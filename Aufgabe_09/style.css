@@ -1,43 +1,44 @@
 body {
     background-color: grey;
-
 }
 
-#appBereich { position: absolute;
+#appBereich {
+    position: absolute;
     margin: 0 auto;
     text-align: center;
-
-    
-    
 }
 
-h1{
+h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 50px;
     font-weight: lighter;
 }
 
-input {width: 15em;
+input {
+    width: 15em;
     height: 2em;
     border: none;
     font-size: 1.5em;
     margin-bottom: 0.2em;
 }
 
-.task1 {width: 364px;
-height: 50px;
-background-color: white;
-position: relative;
-margin-bottom: 0.2em;
-
+.task1 {
+    width: 364px;
+    height: 50px;
+    background-color: white;
+    position: relative;
+    margin-bottom: 0.2em;
 }
 
-
 h3 {
-    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
+}
 
+.far {
+    font-size: 25px;
+}
 
-
+.isHidden {
+    display: none !important;
 }
