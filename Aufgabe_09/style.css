@@ -37,6 +37,7 @@ h3 {
 
 .far {
     font-size: 25px;
+    cursor: pointer;
 }
 
 .isHidden {

@@ -4,6 +4,7 @@ var aufgabe9;
     var taskZahler = 1;
     var notDoneyet = document.querySelector(".fa-circle");
     var taskDone = document.querySelector(".fa-check-circle");
+    var deleteTask = document.querySelector(".fa-trash-alt");
     benutzereingabe.addEventListener("keypress", function (keyboardEvent) {
         if (keyboardEvent.key == "Enter") {
             var newTask = document.createElement("div");
@@ -22,6 +23,9 @@ var aufgabe9;
     });
     taskDone.addEventListener("click", function () {
         changeClasses(this, notDoneyet);
+    });
+    deleteTask.addEventListener("click", function () {
+        document.querySelector(".task1").classList.add("isHidden");
     });
 })(aufgabe9 || (aufgabe9 = {}));
 //# sourceMappingURL=script.js.map

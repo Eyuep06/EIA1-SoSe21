@@ -5,6 +5,8 @@ namespace aufgabe9 {
   let taskZahler: number = 1;
   let notDoneyet: HTMLElement = document.querySelector(".fa-circle");
   let taskDone: HTMLElement = document.querySelector(".fa-check-circle");
+  let deleteTask: HTMLElement = document.querySelector(".fa-trash-alt");
+
 
 
 
@@ -40,6 +42,11 @@ namespace aufgabe9 {
   taskDone.addEventListener("click", function (): void {
     changeClasses(this, notDoneyet);
 
+  });
+
+
+  deleteTask.addEventListener("click", function (): void {
+    document.querySelector(".task1").classList.add("isHidden");
   });
 
 }
