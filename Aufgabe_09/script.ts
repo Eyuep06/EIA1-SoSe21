@@ -2,7 +2,7 @@ namespace aufgabe9 {
 
 
   let benutzereingabe: HTMLInputElement = document.querySelector("#addTask") as HTMLInputElement;
-
+  
 
 
 
@@ -14,8 +14,7 @@ namespace aufgabe9 {
 
       let newTask: HTMLDivElement = document.createElement("div");
       newTask.className = "task1";
-      document.querySelector(".furtherTasks").appendChild(newTask);
-
+      document.querySelector(".furtherTasks").appendChild(newTask).innerHTML = benutzereingabe.value;
 
     }
 

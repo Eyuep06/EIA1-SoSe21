@@ -5,7 +5,7 @@ var aufgabe9;
         if (keyboardEvent.key == "Enter") {
             var newTask = document.createElement("div");
             newTask.className = "task1";
-            document.querySelector(".furtherTasks").appendChild(newTask);
+            document.querySelector(".furtherTasks").appendChild(newTask).innerHTML = benutzereingabe.value;
         }
     });
     /* if (keyboardEvent.key == "Enter") {
