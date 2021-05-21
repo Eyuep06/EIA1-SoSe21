@@ -1,12 +1,8 @@
 namespace aufgabe9 {
 
-
+  
   let benutzereingabe: HTMLInputElement = document.querySelector("#addTask") as HTMLInputElement;
-  let taskZahler: number = 1;
-  let notDoneyet: HTMLElement = document.querySelector(".fa-circle");
-  let taskDone: HTMLElement = document.querySelector(".fa-check-circle");
-  let deleteTask: HTMLElement = document.querySelector(".fa-trash-alt");
-
+  let taskZahler: number = 0;
 
 
 
@@ -18,35 +14,55 @@ namespace aufgabe9 {
 
       let newTask: HTMLDivElement = document.createElement("div");
       newTask.className = "task1";
-      document.querySelector(".furtherTasks").appendChild(newTask).innerHTML = benutzereingabe.value;
+      const circle: HTMLElement = document.createElement("i");
+      circle.classList.add("far", "fa-circle");
+      const circleCheck: HTMLElement = document.createElement("i");
+      circleCheck.classList.add("far", "fa-check-circle", "isHidden");
+      const trash: HTMLElement = document.createElement("i");
+      trash.classList.add("far", "fa-trash-alt");
       taskZahler = taskZahler + 1;
       document.querySelector("h3").innerHTML = taskZahler + " in total";
+
+      document.querySelector(".furtherTasks").appendChild(newTask).innerHTML = benutzereingabe.value;
+      newTask.appendChild(circle);
+      newTask.appendChild(circleCheck);
+      newTask.appendChild(trash);
+
+      function changeClasses(firsHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
+        firsHTMLElement.classList.add("isHidden");
+        secondHTMLElement.classList.remove("isHidden");
+
+
+      }
+
+
+      circleCheck.addEventListener("click", function (): void {
+        changeClasses(circleCheck, circle);
+      });
+
+      circle.addEventListener("click", function (): void {
+        changeClasses(circle, circleCheck);
+
+      });
+
+
+
+      
+
+      trash.addEventListener("click", function (): void {
+        newTask.classList.add("isHidden");
+        
+      });
+
+
+
+
     }
 
 
   });
 
 
-  function changeClasses(firsHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
-    firsHTMLElement.classList.add("isHidden");
-    secondHTMLElement.classList.remove("isHidden");
 
-
-  }
-
-
-  notDoneyet.addEventListener("click", function (): void {
-    changeClasses(this, taskDone);
-  });
-
-  taskDone.addEventListener("click", function (): void {
-    changeClasses(this, notDoneyet);
-
-  });
-
-
-  deleteTask.addEventListener("click", function (): void {
-    document.querySelector(".task1").classList.add("isHidden");
-  });
 
 }
