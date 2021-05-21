@@ -12,11 +12,13 @@ var aufgabe9;
             circleCheck_1.classList.add("far", "fa-check-circle", "isHidden");
             var trash = document.createElement("i");
             trash.classList.add("far", "fa-trash-alt");
+            var eingabeTask = new Text(benutzereingabe.value);
             taskZahler = taskZahler + 1;
             document.querySelector("h3").innerHTML = taskZahler + " in total";
-            document.querySelector(".furtherTasks").appendChild(newTask_1).innerHTML = benutzereingabe.value;
+            document.querySelector(".furtherTasks").appendChild(newTask_1);
             newTask_1.appendChild(circle_1);
             newTask_1.appendChild(circleCheck_1);
+            newTask_1.appendChild(eingabeTask);
             newTask_1.appendChild(trash);
             function changeClasses(firsHTMLElement, secondHTMLElement) {
                 firsHTMLElement.classList.add("isHidden");
@@ -30,6 +32,8 @@ var aufgabe9;
             });
             trash.addEventListener("click", function () {
                 newTask_1.classList.add("isHidden");
+                taskZahler--;
+                document.querySelector("h3").innerHTML = taskZahler + " in total";
             });
         }
     });

@@ -1,6 +1,6 @@
 namespace aufgabe9 {
 
-  
+
   let benutzereingabe: HTMLInputElement = document.querySelector("#addTask") as HTMLInputElement;
   let taskZahler: number = 0;
 
@@ -20,12 +20,15 @@ namespace aufgabe9 {
       circleCheck.classList.add("far", "fa-check-circle", "isHidden");
       const trash: HTMLElement = document.createElement("i");
       trash.classList.add("far", "fa-trash-alt");
+      let eingabeTask: Text = new Text(benutzereingabe.value);
       taskZahler = taskZahler + 1;
       document.querySelector("h3").innerHTML = taskZahler + " in total";
 
-      document.querySelector(".furtherTasks").appendChild(newTask).innerHTML = benutzereingabe.value;
+      document.querySelector(".furtherTasks").appendChild(newTask);
+
       newTask.appendChild(circle);
       newTask.appendChild(circleCheck);
+      newTask.appendChild(eingabeTask);
       newTask.appendChild(trash);
 
       function changeClasses(firsHTMLElement: HTMLElement, secondHTMLElement: HTMLElement): void {
@@ -47,12 +50,16 @@ namespace aufgabe9 {
 
 
 
-      
+
 
       trash.addEventListener("click", function (): void {
         newTask.classList.add("isHidden");
-        
+        taskZahler--;
+        document.querySelector("h3").innerHTML = taskZahler + " in total";
+
+
       });
+
 
 
 
@@ -61,6 +68,8 @@ namespace aufgabe9 {
 
 
   });
+
+
 
 
 
