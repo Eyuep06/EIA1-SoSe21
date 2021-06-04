@@ -134,11 +134,12 @@ namespace aufgabe11 {
     }
 
     var recordButton: HTMLElement = document.querySelector("#recordButton");
+    console.log(recordButton);
 
 
     declare var Artyom: any;
 
-    recordButton.addEventListener("click", function (): void  {
+    recordButton.addEventListener("click", function (): void {
         const artyom: any = new Artyom();
 
         artyom.addCommands({

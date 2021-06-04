@@ -77,6 +77,7 @@ var aufgabe11;
         drawListToDOM();
     }
     var recordButton = document.querySelector("#recordButton");
+    console.log(recordButton);
     recordButton.addEventListener("click", function () {
         var artyom = new Artyom();
         artyom.addCommands({
